@@ -20,38 +20,79 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
-		<!-- Slideshow Section -->
-		<section class="slideshow-section">
-			<div class="slideshow-container">
-				<div class="slideshow-wrapper">
-					<div class="slide active">
-						<img src="/bibimbob2.jpg" alt="Korean Bibimbap" class="slide-image" />
+		<!-- Gallery Grid Section -->
+		<section class="gallery-section section">
+			<div class="container">
+				<div class="gallery-grid">
+					<!-- Gallery Item 1 -->
+					<div class="gallery-item">
+						<div class="gallery-media">
+							<img src="/bibimbob2.jpg" alt="Korean Bibimbap" class="gallery-image" />
+						</div>
 					</div>
-					<div class="slide">
-						<img src="/store.jpeg" alt="Restaurant Interior" class="slide-image" />
+
+					<!-- Gallery Item 2 -->
+					<div class="gallery-item">
+						<div class="gallery-media">
+							<img src="/store.jpeg" alt="Restaurant Interior" class="gallery-image" />
+						</div>
 					</div>
-					<div class="slide">
-						<img src="/bibimbob2.jpg" alt="Korean Bibimbap" class="slide-image" />
+
+					<!-- Gallery Item 3 - Placeholder for future content -->
+					<div class="gallery-item">
+						<div class="gallery-media">
+							<div class="gallery-placeholder">
+								<svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+									<circle cx="8.5" cy="8.5" r="1.5"/>
+									<polyline points="21,15 16,10 5,21"/>
+								</svg>
+								<span>Add Image</span>
+							</div>
+						</div>
 					</div>
-					<div class="slide">
-						<img src="/store.jpeg" alt="Restaurant Interior" class="slide-image" />
+
+					<!-- Gallery Item 4 - Placeholder for future content -->
+					<div class="gallery-item">
+						<div class="gallery-media">
+							<div class="gallery-placeholder">
+								<svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+									<circle cx="8.5" cy="8.5" r="1.5"/>
+									<polyline points="21,15 16,10 5,21"/>
+								</svg>
+								<span>Add Image</span>
+							</div>
+						</div>
 					</div>
-					<div class="slide">
-						<img src="/bibimbob2.jpg" alt="Korean Bibimbap" class="slide-image" />
+
+					<!-- Gallery Item 5 - Placeholder for future content -->
+					<div class="gallery-item">
+						<div class="gallery-media">
+							<div class="gallery-placeholder">
+								<svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+									<circle cx="8.5" cy="8.5" r="1.5"/>
+									<polyline points="21,15 16,10 5,21"/>
+								</svg>
+								<span>Add Image</span>
+							</div>
+						</div>
 					</div>
-					<div class="slide">
-						<img src="/store.jpeg" alt="Restaurant Interior" class="slide-image" />
+
+					<!-- Gallery Item 6 - Placeholder for future content -->
+					<div class="gallery-item">
+						<div class="gallery-media">
+							<div class="gallery-placeholder">
+								<svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+									<circle cx="8.5" cy="8.5" r="1.5"/>
+									<polyline points="21,15 16,10 5,21"/>
+								</svg>
+								<span>Add Image</span>
+							</div>
+						</div>
 					</div>
-				</div>
-				
-				<!-- Navigation dots -->
-				<div class="slide-dots">
-					<span class="dot active" onclick="currentSlide(1)"></span>
-					<span class="dot" onclick="currentSlide(2)"></span>
-					<span class="dot" onclick="currentSlide(3)"></span>
-					<span class="dot" onclick="currentSlide(4)"></span>
-					<span class="dot" onclick="currentSlide(5)"></span>
-					<span class="dot" onclick="currentSlide(6)"></span>
 				</div>
 			</div>
 		</section>
@@ -89,68 +130,75 @@ import Footer from '../components/Footer.astro';
 		margin-bottom: 0;
 	}
 
-	/* Slideshow Section */
-	.slideshow-section {
+	/* Gallery Section */
+	.gallery-section {
 		background-color: var(--color-gray-50);
-		padding: var(--space-16) 0;
 	}
 
-	.slideshow-container {
-		max-width: 1000px;
-		margin: 0 auto;
-		position: relative;
+	.gallery-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: var(--space-8);
+		margin-top: var(--space-8);
 	}
 
-	.slideshow-wrapper {
-		position: relative;
-		width: 100%;
-		height: 600px;
+	.gallery-item {
+		background-color: var(--color-white);
+		border-radius: var(--radius-lg);
 		overflow: hidden;
-		border-radius: var(--radius-xl);
+		box-shadow: var(--shadow-md);
+		transition: all var(--transition-normal);
+	}
+
+	.gallery-item:hover {
+		transform: translateY(-4px);
 		box-shadow: var(--shadow-xl);
 	}
 
-	.slide {
-		position: absolute;
-		top: 0;
-		left: 0;
+	.gallery-media {
+		position: relative;
 		width: 100%;
-		height: 100%;
-		opacity: 0;
-		transition: opacity 1s ease-in-out;
+		height: 250px;
+		overflow: hidden;
 	}
 
-	.slide.active {
-		opacity: 1;
-	}
-
-	.slide-image {
+	.gallery-image {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
+		transition: transform var(--transition-normal);
 	}
 
-	.slide-dots {
-		text-align: center;
-		margin-top: var(--space-6);
+	.gallery-item:hover .gallery-image {
+		transform: scale(1.05);
 	}
 
-	.dot {
-		height: 12px;
-		width: 12px;
-		margin: 0 6px;
-		background-color: var(--color-gray-400);
-		border-radius: 50%;
-		display: inline-block;
-		transition: background-color var(--transition-fast);
-		cursor: pointer;
+	.gallery-placeholder {
+		width: 100%;
+		height: 100%;
+		background-color: var(--color-gray-100);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-gray-500);
+		font-weight: var(--font-weight-medium);
+		transition: all var(--transition-normal);
 	}
 
-	.dot.active,
-	.dot:hover {
-		background-color: var(--color-primary);
+	.gallery-item:hover .gallery-placeholder {
+		background-color: var(--color-gray-200);
+		color: var(--color-gray-600);
 	}
+
+	.placeholder-icon {
+		width: 48px;
+		height: 48px;
+		margin-bottom: var(--space-2);
+		opacity: 0.6;
+	}
+
 
 	/* Responsive Design */
 	@media (max-width: 768px) {
@@ -166,8 +214,13 @@ import Footer from '../components/Footer.astro';
 			font-size: var(--font-size-base);
 		}
 
-		.slideshow-wrapper {
-			height: 400px;
+		.gallery-grid {
+			grid-template-columns: 1fr;
+			gap: var(--space-6);
+		}
+
+		.gallery-media {
+			height: 200px;
 		}
 	}
 
@@ -176,44 +229,19 @@ import Footer from '../components/Footer.astro';
 			font-size: var(--font-size-3xl);
 		}
 
-		.slideshow-wrapper {
-			height: 300px;
+	}
+
+	/* Large screens - 4 columns */
+	@media (min-width: 1200px) {
+		.gallery-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	/* Extra large screens - 5 columns */
+	@media (min-width: 1400px) {
+		.gallery-grid {
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 </style>
-
-<script>
-	let slideIndex = 1;
-	const slides = document.querySelectorAll('.slide');
-	const dots = document.querySelectorAll('.dot');
-
-	function showSlide(n) {
-		if (n > slides.length) { slideIndex = 1; }
-		if (n < 1) { slideIndex = slides.length; }
-		
-		slides.forEach(slide => slide.classList.remove('active'));
-		dots.forEach(dot => dot.classList.remove('active'));
-		
-		slides[slideIndex - 1].classList.add('active');
-		dots[slideIndex - 1].classList.add('active');
-	}
-
-	function currentSlide(n) {
-		slideIndex = n;
-		showSlide(slideIndex);
-	}
-
-	// Auto-advance slideshow
-	function autoSlide() {
-		slideIndex++;
-		showSlide(slideIndex);
-	}
-
-	// Initialize slideshow
-	document.addEventListener('DOMContentLoaded', function() {
-		showSlide(slideIndex);
-		
-		// Auto-advance every 4 seconds
-		setInterval(autoSlide, 4000);
-	});
-</script>
