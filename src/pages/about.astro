@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="About Us - YoriTofu Korean Restaurant" description="Learn about YoriTofu's story, our commitment to authentic Korean cuisine, and our passion for creating memorable dining experiences.">
+	<Header />
+	
+	<main>
+		<section class="page-hero">
+			<div class="container">
+				<h1 class="page-title">About YoriTofu</h1>
+				<p class="page-subtitle">Where every meal is a celebration of flavor and warmth</p>
+			</div>
+		</section>
+		
+		<section class="content section">
+			<div class="container">
+				<div class="content-grid">
+					<div class="content-text">
+						<h2>Our Story</h2>
+						<p>
+							Welcome to YoriTofu, where every meal is a celebration of flavor and warmth. 
+							Feel the excitement of Sizzling stone pot dishes, served piping hot and crackling 
+							with every bite. Let the comforting aroma of Bubbling stews in traditional clay 
+							pots soothe your senses and bring a sense of home.
+						</p>
+						<p>
+							And join in the joy of Cheering, raising a glass with friends and loved ones 
+							over delicious food. At YoriTofu, we also take pride in our variety of wholesome 
+							tofu dishes, crafted with care to delight both vegetarians and anyone seeking a 
+							healthy, satisfying meal.
+						</p>
+						<p>
+							Every dish is made with fresh ingredients, balanced flavors, and a touch of 
+							love—because great food is about more than just taste; it's about sharing moments, 
+							creating memories, and feeling truly nourished.
+						</p>
+					</div>
+					<div class="content-image">
+						<div class="image-placeholder">Restaurant Story Photo</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<Footer />
+</Layout>
+
+<style>
+	.page-hero {
+		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+		color: var(--color-white);
+		text-align: center;
+		padding: var(--space-20) 0;
+	}
+	
+	.page-title {
+		font-size: var(--font-size-4xl);
+		font-weight: var(--font-weight-bold);
+		color: var(--color-white);
+		margin-bottom: var(--space-4);
+	}
+	
+	.page-subtitle {
+		font-size: var(--font-size-lg);
+		color: rgba(255, 255, 255, 0.9);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	
+	.content-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--space-12);
+		align-items: center;
+	}
+	
+	.content-text h2 {
+		color: var(--color-primary);
+		margin-bottom: var(--space-6);
+	}
+	
+	.content-text p {
+		margin-bottom: var(--space-6);
+		line-height: var(--line-height-relaxed);
+	}
+	
+	.content-image {
+		height: 400px;
+	}
+	
+	.image-placeholder {
+		width: 100%;
+		height: 100%;
+		background-color: var(--color-gray-200);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-gray-500);
+		font-weight: var(--font-weight-medium);
+		border-radius: var(--radius-lg);
+	}
+	
+	@media (max-width: 768px) {
+		.page-hero {
+			padding: var(--space-16) 0;
+		}
+		
+		.page-title {
+			font-size: var(--font-size-3xl);
+		}
+		
+		.content-grid {
+			grid-template-columns: 1fr;
+			gap: var(--space-8);
+		}
+	}
+</style>

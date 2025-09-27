@@ -1,11 +1,467 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="YoriTofu - Authentic Korean Restaurant" description="Experience the best Korean cuisine with sizzling stone pot dishes, bubbling stews, and fresh tofu specialties. Sizzling, Bubbling & Cheering at YoriTofu.">
+	<Header />
+	
+	<main>
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="hero-content">
+				<div class="container">
+					<div class="hero-text">
+						<h1 class="hero-title">
+							Sizzling, Bubbling<br>
+							<span class="accent-text">& Cheering</span>
+						</h1>
+						<p class="hero-description">
+							Experience authentic Korean cuisine with sizzling stone pot dishes, 
+							bubbling stews in traditional clay pots, and wholesome tofu specialties 
+							crafted with love and fresh ingredients.
+						</p>
+						<div class="hero-actions">
+							<a href="/menu" class="btn btn-primary btn-lg">Explore Menu</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hero-image">
+				<img src="/bibimbob2.jpg" alt="Delicious Korean Bibimbap" class="hero-food-image" />
+			</div>
+		</section>
+
+		<!-- Features Section -->
+		<section class="features section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title">What Makes Us Special</h2>
+					<p class="section-description">
+						Three pillars of the authentic Korean dining experience
+					</p>
+				</div>
+				
+				<div class="features-grid">
+					<div class="feature-card card">
+						<div class="card-body">
+							<div class="feature-icon">🔥</div>
+							<h3 class="feature-title">Sizzling</h3>
+							<p class="feature-description">
+								Stone pot dishes served piping hot and crackling with every bite, 
+								bringing excitement to your table.
+							</p>
+						</div>
+					</div>
+					
+					<div class="feature-card card">
+						<div class="card-body">
+							<div class="feature-icon">🍲</div>
+							<h3 class="feature-title">Bubbling</h3>
+							<p class="feature-description">
+								Comforting stews in traditional clay pots that soothe your senses 
+								and bring a sense of home.
+							</p>
+						</div>
+					</div>
+					
+					<div class="feature-card card">
+						<div class="card-body">
+							<div class="feature-icon">🥂</div>
+							<h3 class="feature-title">Cheering</h3>
+							<p class="feature-description">
+								Join in the joy of raising a glass with friends and loved ones 
+								over delicious food and great company.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Preview Section -->
+		<section class="about-preview section">
+			<div class="container">
+				<div class="about-content">
+					<div class="about-text">
+						<h2 class="section-title">About YoriTofu</h2>
+						<p class="about-description">
+							Welcome to YoriTofu, where every meal is a celebration of flavor and warmth. 
+							We take pride in our variety of wholesome tofu dishes, crafted with care to 
+							delight both vegetarians and anyone seeking a healthy, satisfying meal.
+						</p>
+						<p class="about-description">
+							Every dish is made with fresh ingredients, balanced flavors, and a touch of 
+							love—because great food is about more than just taste; it's about sharing 
+							moments, creating memories, and feeling truly nourished.
+						</p>
+						<a href="/about" class="btn btn-secondary">Learn More About Us</a>
+					</div>
+					<div class="about-image">
+						<img src="/store.jpeg" alt="YoriTofu Restaurant Interior" class="about-restaurant-image" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Menu Preview Section -->
+		<section class="menu-preview section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title">Our Specialties</h2>
+					<p class="section-description">
+						Discover our signature dishes and Korean pub favorites
+					</p>
+				</div>
+				
+				<div class="menu-categories">
+					<div class="menu-category card">
+						<div class="menu-category-image">
+							<div class="image-placeholder">Korean Pub Bites</div>
+						</div>
+						<div class="card-body">
+							<h3 class="menu-category-title">Korean Pub Bites</h3>
+							<p class="menu-category-description">
+								Perfect appetizers and small plates to share with friends
+							</p>
+							<a href="/menu" class="btn btn-outline">View Menu</a>
+						</div>
+					</div>
+					
+					<div class="menu-category card">
+						<div class="menu-category-image">
+							<div class="image-placeholder">Cheering Menu</div>
+						</div>
+						<div class="card-body">
+							<h3 class="menu-category-title">Cheering Menu</h3>
+							<p class="menu-category-description">
+								Drinks and dishes perfect for celebrations and gatherings
+							</p>
+							<a href="/drinks" class="btn btn-outline">View Drinks</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="cta section">
+			<div class="container">
+				<div class="cta-content">
+					<h2 class="cta-title">Ready for an Authentic Korean Experience?</h2>
+					<p class="cta-description">
+						Join us for a memorable dining experience with fresh ingredients, 
+						traditional recipes, and warm hospitality.
+					</p>
+					<div class="cta-actions">
+						<a href="/reservations" class="btn btn-primary btn-lg">Make a Reservation</a>
+						<a href="/contact" class="btn btn-outline btn-lg">Get Directions</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<Footer />
 </Layout>
+
+<style>
+	/* Hero Section */
+	.hero {
+		min-height: 80vh;
+		display: flex;
+		align-items: center;
+		background: linear-gradient(135deg, var(--color-gray-50) 0%, var(--color-gray-100) 100%);
+		position: relative;
+		overflow: hidden;
+	}
+	
+	.hero-content {
+		flex: 1;
+		z-index: 2;
+	}
+	
+	.hero-text {
+		max-width: 600px;
+	}
+	
+	.hero-title {
+		font-size: var(--font-size-5xl);
+		font-weight: var(--font-weight-extrabold);
+		line-height: var(--line-height-tight);
+		margin-bottom: var(--space-6);
+		color: var(--color-gray-900);
+	}
+	
+	.accent-text {
+		color: var(--color-primary);
+	}
+	
+	.hero-description {
+		font-size: var(--font-size-lg);
+		color: var(--color-gray-600);
+		line-height: var(--line-height-relaxed);
+		margin-bottom: var(--space-8);
+	}
+	
+	.hero-actions {
+		display: flex;
+		gap: var(--space-4);
+		flex-wrap: wrap;
+	}
+	
+	.hero-image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 100%;
+		z-index: 1;
+	}
+	
+	.hero-food-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+		transform: scale(1.05);
+		border-radius: var(--radius-lg);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+	}
+	
+	.hero-placeholder,
+	.image-placeholder {
+		width: 100%;
+		height: 100%;
+		background-color: var(--color-gray-200);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-gray-500);
+		font-weight: var(--font-weight-medium);
+		border-radius: var(--radius-lg);
+	}
+	
+	/* Features Section */
+	.features {
+		background-color: var(--color-white);
+	}
+	
+	.section-header {
+		text-align: center;
+		margin-bottom: var(--space-12);
+	}
+	
+	.section-title {
+		font-size: var(--font-size-3xl);
+		font-weight: var(--font-weight-bold);
+		color: var(--color-gray-900);
+		margin-bottom: var(--space-4);
+	}
+	
+	.section-description {
+		font-size: var(--font-size-lg);
+		color: var(--color-gray-600);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: var(--space-8);
+	}
+	
+	.feature-card {
+		text-align: center;
+		transition: transform var(--transition-normal);
+	}
+	
+	.feature-card:hover {
+		transform: translateY(-4px);
+	}
+	
+	.feature-icon {
+		font-size: var(--font-size-4xl);
+		margin-bottom: var(--space-4);
+	}
+	
+	.feature-title {
+		font-size: var(--font-size-xl);
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-gray-900);
+		margin-bottom: var(--space-3);
+	}
+	
+	.feature-description {
+		color: var(--color-gray-600);
+		line-height: var(--line-height-relaxed);
+	}
+	
+	/* About Preview Section */
+	.about-preview {
+		background-color: var(--color-gray-50);
+	}
+	
+	.about-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--space-12);
+		align-items: center;
+	}
+	
+	.about-description {
+		color: var(--color-gray-600);
+		line-height: var(--line-height-relaxed);
+		margin-bottom: var(--space-6);
+	}
+	
+	.about-image {
+		height: 400px;
+	}
+	
+	.about-restaurant-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: var(--radius-lg);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	}
+	
+	/* Menu Preview Section */
+	.menu-preview {
+		background-color: var(--color-white);
+	}
+	
+	.menu-categories {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		gap: var(--space-8);
+	}
+	
+	.menu-category {
+		transition: transform var(--transition-normal);
+	}
+	
+	.menu-category:hover {
+		transform: translateY(-4px);
+	}
+	
+	.menu-category-image {
+		height: 200px;
+		margin-bottom: var(--space-4);
+	}
+	
+	.menu-category-title {
+		font-size: var(--font-size-xl);
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-gray-900);
+		margin-bottom: var(--space-3);
+	}
+	
+	.menu-category-description {
+		color: var(--color-gray-600);
+		margin-bottom: var(--space-4);
+	}
+	
+	/* CTA Section */
+	.cta {
+		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+		color: var(--color-white);
+		text-align: center;
+	}
+	
+	.cta-content {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	
+	.cta-title {
+		font-size: var(--font-size-3xl);
+		font-weight: var(--font-weight-bold);
+		color: var(--color-white);
+		margin-bottom: var(--space-4);
+	}
+	
+	.cta-description {
+		font-size: var(--font-size-lg);
+		color: rgba(255, 255, 255, 0.9);
+		line-height: var(--line-height-relaxed);
+		margin-bottom: var(--space-8);
+	}
+	
+	.cta-actions {
+		display: flex;
+		gap: var(--space-4);
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	
+	.cta .btn-outline {
+		border-color: var(--color-white);
+		color: var(--color-white);
+	}
+	
+	.cta .btn-outline:hover {
+		background-color: var(--color-white);
+		color: var(--color-primary);
+	}
+	
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.hero {
+			min-height: 60vh;
+			text-align: center;
+		}
+		
+		.hero-image {
+			display: none;
+		}
+		
+		.hero-title {
+			font-size: var(--font-size-4xl);
+		}
+		
+		.hero-actions {
+			justify-content: center;
+		}
+		
+		.about-content {
+			grid-template-columns: 1fr;
+			gap: var(--space-8);
+		}
+		
+		.menu-categories {
+			grid-template-columns: 1fr;
+		}
+		
+		.features-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.cta-actions {
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.cta-actions .btn {
+			width: 100%;
+			max-width: 300px;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.hero-title {
+			font-size: var(--font-size-3xl);
+		}
+		
+		.section-title {
+			font-size: var(--font-size-2xl);
+		}
+		
+		.cta-title {
+			font-size: var(--font-size-2xl);
+		}
+	}
+</style>
