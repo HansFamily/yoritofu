@@ -107,6 +107,11 @@ git commit -m "새 메뉴 사진 추가"
 git push
 ```
 
+To pull code:
+```bash
+git pull
+```
+
 ## ⚠️ Important Rules | 중요한 규칙들
 
 **English:**
