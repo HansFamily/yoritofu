@@ -20,7 +20,7 @@
             <a href="/menu" class="nav-link">Menu</a>
           </li>
           <li class="nav-item">
-            <a href="/drinks" class="nav-link">Drinks</a>
+            <a href="/drink" class="nav-link">Drinks</a>
           </li>
           <li class="nav-item">
             <a href="/gallery" class="nav-link">Gallery</a>
@@ -68,7 +68,7 @@
   }
   
   .brand-logo {
-    height: 40px;
+    height: 48px;
     width: auto;
     transition: transform var(--transition-fast);
   }
@@ -226,7 +226,7 @@
   
   @media (max-width: 480px) {
     .brand-logo {
-      height: 32px;
+      height: 38px;
     }
     
     .nav {
@@ -267,7 +267,7 @@
       
       // Close menu when clicking outside
       document.addEventListener('click', function(e) {
-        if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+        if (e.target && !navMenu.contains(e.target as Node) && !navToggle.contains(e.target as Node)) {
           navMenu.classList.remove('active');
           navToggle.classList.remove('active');
         }

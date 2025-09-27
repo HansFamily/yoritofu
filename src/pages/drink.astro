@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Drink Menu - YoriTofu Korean Restaurant" description="Explore our refreshing drink menu featuring traditional Korean beverages and modern drinks at YoriTofu.">
+	<Header />
+
+	<main>
+		<!-- Drink Menu Section -->
+		<section class="drink-section">
+			<div class="container">
+				<div class="section-header">
+					<h1 class="section-title">Drink Menu</h1>
+					<p class="section-description">Refresh yourself with our selection of traditional Korean drinks and beverages</p>
+				</div>
+
+				<div class="drink-image-container">
+					<img src="/Drink_menu2-1.jpg" alt="YoriTofu Drink Menu" class="drink-image" />
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	/* Drink Section */
+	.drink-section {
+		padding: var(--space-16) 0;
+		background-color: var(--color-gray-50);
+		min-height: 60vh;
+		display: flex;
+		align-items: center;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: var(--space-12);
+	}
+
+	.section-title {
+		font-size: var(--font-size-4xl);
+		font-weight: var(--font-weight-bold);
+		color: var(--color-gray-900);
+		margin-bottom: var(--space-4);
+	}
+
+	.section-description {
+		font-size: var(--font-size-lg);
+		color: var(--color-gray-600);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.drink-image-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: var(--space-8) 0;
+	}
+
+	.drink-image {
+		max-width: 100%;
+		height: auto;
+		border-radius: var(--radius-lg);
+		box-shadow: var(--shadow-lg);
+		transition: transform var(--transition-normal);
+	}
+
+	.drink-image:hover {
+		transform: scale(1.02);
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.drink-section {
+			padding: var(--space-12) 0;
+		}
+
+		.section-title {
+			font-size: var(--font-size-3xl);
+		}
+
+		.section-description {
+			font-size: var(--font-size-base);
+		}
+
+		.drink-image-container {
+			padding: var(--space-6) 0;
+		}
+
+		.drink-image {
+			max-width: 95%;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.drink-section {
+			padding: var(--space-8) 0;
+		}
+
+		.section-title {
+			font-size: var(--font-size-2xl);
+		}
+
+		.drink-image-container {
+			padding: var(--space-4) 0;
+		}
+	}
+</style>
