@@ -1,0 +1,219 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Gallery - YoriTofu" description="Explore our gallery of delicious Korean dishes, restaurant ambiance, and memorable dining moments at YoriTofu.">
+	<Header />
+	
+	<main>
+		<!-- Gallery Hero Section -->
+		<section class="gallery-hero">
+			<div class="container">
+				<div class="gallery-header">
+					<h1 class="gallery-title">Gallery</h1>
+					<p class="gallery-description">
+						Experience the vibrant flavors and warm atmosphere of YoriTofu through our gallery of delicious moments.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Slideshow Section -->
+		<section class="slideshow-section">
+			<div class="slideshow-container">
+				<div class="slideshow-wrapper">
+					<div class="slide active">
+						<img src="/bibimbob2.jpg" alt="Korean Bibimbap" class="slide-image" />
+					</div>
+					<div class="slide">
+						<img src="/store.jpeg" alt="Restaurant Interior" class="slide-image" />
+					</div>
+					<div class="slide">
+						<img src="/bibimbob2.jpg" alt="Korean Bibimbap" class="slide-image" />
+					</div>
+					<div class="slide">
+						<img src="/store.jpeg" alt="Restaurant Interior" class="slide-image" />
+					</div>
+					<div class="slide">
+						<img src="/bibimbob2.jpg" alt="Korean Bibimbap" class="slide-image" />
+					</div>
+					<div class="slide">
+						<img src="/store.jpeg" alt="Restaurant Interior" class="slide-image" />
+					</div>
+				</div>
+				
+				<!-- Navigation dots -->
+				<div class="slide-dots">
+					<span class="dot active" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+					<span class="dot" onclick="currentSlide(4)"></span>
+					<span class="dot" onclick="currentSlide(5)"></span>
+					<span class="dot" onclick="currentSlide(6)"></span>
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<Footer />
+</Layout>
+
+<style>
+	/* Gallery Hero Section */
+	.gallery-hero {
+		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+		color: var(--color-white);
+		padding: var(--space-20) 0 var(--space-16);
+		text-align: center;
+	}
+
+	.gallery-header {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.gallery-title {
+		font-size: var(--font-size-5xl);
+		font-weight: var(--font-weight-extrabold);
+		color: var(--color-white);
+		margin-bottom: var(--space-6);
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	.gallery-description {
+		font-size: var(--font-size-lg);
+		color: rgba(255, 255, 255, 0.9);
+		line-height: var(--line-height-relaxed);
+		margin-bottom: 0;
+	}
+
+	/* Slideshow Section */
+	.slideshow-section {
+		background-color: var(--color-gray-50);
+		padding: var(--space-16) 0;
+	}
+
+	.slideshow-container {
+		max-width: 1000px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.slideshow-wrapper {
+		position: relative;
+		width: 100%;
+		height: 600px;
+		overflow: hidden;
+		border-radius: var(--radius-xl);
+		box-shadow: var(--shadow-xl);
+	}
+
+	.slide {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+	}
+
+	.slide.active {
+		opacity: 1;
+	}
+
+	.slide-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.slide-dots {
+		text-align: center;
+		margin-top: var(--space-6);
+	}
+
+	.dot {
+		height: 12px;
+		width: 12px;
+		margin: 0 6px;
+		background-color: var(--color-gray-400);
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color var(--transition-fast);
+		cursor: pointer;
+	}
+
+	.dot.active,
+	.dot:hover {
+		background-color: var(--color-primary);
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.gallery-hero {
+			padding: var(--space-16) 0 var(--space-12);
+		}
+
+		.gallery-title {
+			font-size: var(--font-size-4xl);
+		}
+
+		.gallery-description {
+			font-size: var(--font-size-base);
+		}
+
+		.slideshow-wrapper {
+			height: 400px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.gallery-title {
+			font-size: var(--font-size-3xl);
+		}
+
+		.slideshow-wrapper {
+			height: 300px;
+		}
+	}
+</style>
+
+<script>
+	let slideIndex = 1;
+	const slides = document.querySelectorAll('.slide');
+	const dots = document.querySelectorAll('.dot');
+
+	function showSlide(n) {
+		if (n > slides.length) { slideIndex = 1; }
+		if (n < 1) { slideIndex = slides.length; }
+		
+		slides.forEach(slide => slide.classList.remove('active'));
+		dots.forEach(dot => dot.classList.remove('active'));
+		
+		slides[slideIndex - 1].classList.add('active');
+		dots[slideIndex - 1].classList.add('active');
+	}
+
+	function currentSlide(n) {
+		slideIndex = n;
+		showSlide(slideIndex);
+	}
+
+	// Auto-advance slideshow
+	function autoSlide() {
+		slideIndex++;
+		showSlide(slideIndex);
+	}
+
+	// Initialize slideshow
+	document.addEventListener('DOMContentLoaded', function() {
+		showSlide(slideIndex);
+		
+		// Auto-advance every 4 seconds
+		setInterval(autoSlide, 4000);
+	});
+</script>

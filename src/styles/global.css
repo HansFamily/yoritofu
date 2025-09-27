@@ -5,9 +5,9 @@
 /* CSS Custom Properties (Design Tokens) */
 :root {
   /* Colors - Korean Restaurant Theme */
-  --color-primary: #d32f2f;        /* Korean red */
-  --color-primary-light: #ff6659;
-  --color-primary-dark: #9a0007;
+  --color-primary: #f27221;        /* Orange */
+  --color-primary-light: #ff8a4d;
+  --color-primary-dark: #d45a0a;
   
   --color-secondary: #2e7d32;      /* Fresh green */
   --color-secondary-light: #60ad5e;

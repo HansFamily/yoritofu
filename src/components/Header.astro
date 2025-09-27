@@ -7,7 +7,7 @@
     <nav class="nav">
       <div class="nav-brand">
         <a href="/" class="brand-link">
-          <h1 class="brand-name">YoriTofu</h1>
+          <img src="/yoritofu_logo.png" alt="YoriTofu" class="brand-logo" />
         </a>
       </div>
       
@@ -15,9 +15,6 @@
         <ul class="nav-list">
           <li class="nav-item">
             <a href="/" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="/about" class="nav-link">About</a>
           </li>
           <li class="nav-item">
             <a href="/menu" class="nav-link">Menu</a>
@@ -35,7 +32,7 @@
       </div>
       
       <div class="nav-actions">
-        <a href="/reservations" class="btn btn-primary">Reserve Table</a>
+        <a href="https://www.menoves-online.com/ordering/restaurant/menu?company_uid=c5ecb552-ab71-411d-98fb-f0056cc73a44&restaurant_uid=c420bc2d-c305-4b26-ab09-2baa1ba2c812&facebook=true" class="btn btn-primary">Online Order</a>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -70,13 +67,14 @@
     text-decoration: none;
   }
   
-  .brand-name {
-    font-family: var(--font-family-accent);
-    font-size: var(--font-size-2xl);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-primary);
-    margin: 0;
-    letter-spacing: -0.02em;
+  .brand-logo {
+    height: 40px;
+    width: auto;
+    transition: transform var(--transition-fast);
+  }
+  
+  .brand-logo:hover {
+    transform: scale(1.05);
   }
   
   .nav-menu {
@@ -213,18 +211,30 @@
       z-index: 1000;
     }
     
+    .nav-actions {
+      gap: var(--space-2);
+    }
+    
     .nav-actions .btn {
-      display: none;
+      display: block;
+      padding: var(--space-2) var(--space-3);
+      font-size: var(--font-size-sm);
+      white-space: nowrap;
     }
   }
   
   @media (max-width: 480px) {
-    .brand-name {
-      font-size: var(--font-size-xl);
+    .brand-logo {
+      height: 32px;
     }
     
     .nav {
       padding: var(--space-3) 0;
+    }
+    
+    .nav-actions .btn {
+      padding: var(--space-1) var(--space-2);
+      font-size: var(--font-size-xs);
     }
   }
 </style>

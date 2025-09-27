@@ -1,0 +1,400 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Online Order - YoriTofu Korean Restaurant" description="Order authentic Korean cuisine online from YoriTofu. Fresh ingredients, traditional recipes, and convenient delivery.">
+	<Header />
+	
+	<main>
+		<!-- Hero Section -->
+		<section class="order-hero">
+			<div class="container">
+				<div class="hero-content">
+					<h1 class="hero-title">Online Order</h1>
+					<p class="hero-description">
+						Order your favorite Korean dishes online and enjoy authentic flavors at home
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Order Info Section -->
+		<section class="order-info section">
+			<div class="container">
+				<div class="info-grid">
+					<div class="info-card">
+						<div class="info-icon">🚚</div>
+						<h3>Fast Delivery</h3>
+						<p>Quick and reliable delivery to your doorstep</p>
+					</div>
+					<div class="info-card">
+						<div class="info-icon">🍽️</div>
+						<h3>Fresh Ingredients</h3>
+						<p>Made with the freshest ingredients daily</p>
+					</div>
+					<div class="info-card">
+						<div class="info-icon">📱</div>
+						<h3>Easy Ordering</h3>
+						<p>Simple online ordering process</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Menu Categories -->
+		<section class="menu-categories section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title">Order from Our Menu</h2>
+					<p class="section-description">Choose from our authentic Korean dishes</p>
+				</div>
+				
+				<div class="categories-grid">
+					<a href="/menu#appetizers" class="category-card">
+						<div class="category-image">
+							<div class="image-placeholder">Appetizers</div>
+						</div>
+						<div class="category-content">
+							<h3>Appetizers</h3>
+							<p>Start your meal with delicious Korean appetizers</p>
+						</div>
+					</a>
+					
+					<a href="/menu#sizzling" class="category-card">
+						<div class="category-image">
+							<div class="image-placeholder">Sizzling</div>
+						</div>
+						<div class="category-content">
+							<h3>Sizzling</h3>
+							<p>Hot stone pot dishes served sizzling</p>
+						</div>
+					</a>
+					
+					<a href="/menu#bubbling" class="category-card">
+						<div class="category-image">
+							<div class="image-placeholder">Bubbling</div>
+						</div>
+						<div class="category-content">
+							<h3>Bubbling</h3>
+							<p>Comforting stews in traditional clay pots</p>
+						</div>
+					</a>
+					
+					<a href="/menu#yori" class="category-card">
+						<div class="category-image">
+							<div class="image-placeholder">Yori</div>
+						</div>
+						<div class="category-content">
+							<h3>Yori</h3>
+							<p>Fresh tofu specialties and healthy dishes</p>
+						</div>
+					</a>
+					
+					<a href="/menu#pub-bites" class="category-card">
+						<div class="category-image">
+							<div class="image-placeholder">Korean Pub Bites</div>
+						</div>
+						<div class="category-content">
+							<h3>Korean Pub Bites</h3>
+							<p>Perfect appetizers and small plates to share</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Online Ordering -->
+		<section class="online-ordering section">
+			<div class="container">
+				<div class="ordering-content">
+					<h2 class="section-title">Order Online Now</h2>
+					<p class="section-description">
+						Browse our full menu and place your order online for pickup or delivery.
+					</p>
+					<div class="ordering-actions">
+						<a href="https://www.menoves-online.com/ordering/restaurant/menu?company_uid=c5ecb552-ab71-411d-98fb-f0056cc73a44&restaurant_uid=c420bc2d-c305-4b26-ab09-2baa1ba2c812&facebook=true" 
+						   class="btn btn-primary btn-lg" 
+						   target="_blank" 
+						   rel="noopener noreferrer">
+							Order Online
+						</a>
+						<a href="tel:+1234567890" class="btn btn-outline btn-lg">Call to Order</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Info -->
+		<section class="contact-info section">
+			<div class="container">
+				<div class="contact-content">
+					<h2 class="section-title">Visit Us</h2>
+					<p class="section-description">
+						Experience our warm hospitality and authentic Korean cuisine in person.
+					</p>
+					<div class="contact-actions">
+						<a href="/contact" class="btn btn-outline btn-lg">Get Directions</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<Footer />
+</Layout>
+
+<style>
+	/* Order Hero Section */
+	.order-hero {
+		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+		color: var(--color-white);
+		text-align: center;
+		padding: var(--space-20) 0;
+	}
+	
+	.hero-title {
+		font-size: var(--font-size-5xl);
+		font-weight: var(--font-weight-extrabold);
+		margin-bottom: var(--space-6);
+		color: var(--color-white);
+	}
+	
+	.hero-description {
+		font-size: var(--font-size-xl);
+		color: rgba(255, 255, 255, 0.9);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	
+	/* Order Info Section */
+	.order-info {
+		background-color: var(--color-white);
+	}
+	
+	.info-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: var(--space-8);
+	}
+	
+	.info-card {
+		text-align: center;
+		padding: var(--space-8);
+		background-color: var(--color-gray-50);
+		border-radius: var(--radius-lg);
+		transition: transform var(--transition-normal);
+	}
+	
+	.info-card:hover {
+		transform: translateY(-4px);
+	}
+	
+	.info-icon {
+		font-size: var(--font-size-4xl);
+		margin-bottom: var(--space-4);
+	}
+	
+	.info-card h3 {
+		font-size: var(--font-size-xl);
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-gray-900);
+		margin-bottom: var(--space-3);
+	}
+	
+	.info-card p {
+		color: var(--color-gray-600);
+		margin: 0;
+	}
+	
+	/* Menu Categories Section */
+	.menu-categories {
+		background-color: var(--color-gray-50);
+	}
+	
+	.section-header {
+		text-align: center;
+		margin-bottom: var(--space-12);
+	}
+	
+	.section-title {
+		font-size: var(--font-size-3xl);
+		font-weight: var(--font-weight-bold);
+		color: var(--color-gray-900);
+		margin-bottom: var(--space-4);
+	}
+	
+	.section-description {
+		font-size: var(--font-size-lg);
+		color: var(--color-gray-600);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	
+	.categories-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: var(--space-8);
+	}
+	
+	.category-card {
+		background-color: var(--color-white);
+		border-radius: var(--radius-lg);
+		overflow: hidden;
+		box-shadow: var(--shadow-md);
+		transition: all var(--transition-normal);
+		text-decoration: none;
+		color: inherit;
+	}
+	
+	.category-card:hover {
+		transform: translateY(-4px);
+		box-shadow: var(--shadow-lg);
+	}
+	
+	.category-image {
+		height: 200px;
+		overflow: hidden;
+	}
+	
+	.category-image .image-placeholder {
+		width: 100%;
+		height: 100%;
+		background-color: var(--color-gray-200);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-gray-500);
+		font-weight: var(--font-weight-medium);
+		font-size: var(--font-size-lg);
+	}
+	
+	.category-content {
+		padding: var(--space-6);
+	}
+	
+	.category-content h3 {
+		font-size: var(--font-size-xl);
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-gray-900);
+		margin-bottom: var(--space-3);
+	}
+	
+	.category-content p {
+		color: var(--color-gray-600);
+		margin: 0;
+	}
+	
+	/* Online Ordering Section */
+	.online-ordering {
+		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+		color: var(--color-white);
+		text-align: center;
+	}
+	
+	.ordering-content {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	
+	.ordering-content .section-title {
+		color: var(--color-white);
+		font-size: var(--font-size-3xl);
+		font-weight: var(--font-weight-bold);
+		margin-bottom: var(--space-4);
+	}
+	
+	.ordering-content .section-description {
+		color: rgba(255, 255, 255, 0.9);
+		font-size: var(--font-size-lg);
+		margin-bottom: var(--space-8);
+	}
+	
+	.ordering-actions {
+		display: flex;
+		gap: var(--space-4);
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	
+	.ordering-actions .btn-outline {
+		border-color: var(--color-white);
+		color: var(--color-white);
+	}
+	
+	.ordering-actions .btn-outline:hover {
+		background-color: var(--color-white);
+		color: var(--color-primary);
+	}
+	
+	/* Contact Info Section */
+	.contact-info {
+		background-color: var(--color-gray-50);
+		text-align: center;
+	}
+	
+	.contact-content {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	
+	.contact-actions {
+		display: flex;
+		gap: var(--space-4);
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: var(--space-8);
+	}
+	
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.hero-title {
+			font-size: var(--font-size-4xl);
+		}
+		
+		.hero-description {
+			font-size: var(--font-size-lg);
+		}
+		
+		.info-grid {
+			grid-template-columns: 1fr;
+			gap: var(--space-6);
+		}
+		
+		.categories-grid {
+			grid-template-columns: 1fr;
+			gap: var(--space-6);
+		}
+		
+		.ordering-actions {
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.ordering-actions .btn {
+			width: 100%;
+			max-width: 300px;
+		}
+		
+		.contact-actions {
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.contact-actions .btn {
+			width: 100%;
+			max-width: 300px;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.hero-title {
+			font-size: var(--font-size-3xl);
+		}
+		
+		.section-title {
+			font-size: var(--font-size-2xl);
+		}
+	}
+</style>

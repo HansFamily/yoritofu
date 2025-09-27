@@ -33,47 +33,40 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
-		<!-- Features Section -->
-		<section class="features section">
+		<!-- Menu Preview Section -->
+		<section class="menu-preview section">
 			<div class="container">
 				<div class="section-header">
-					<h2 class="section-title">What Makes Us Special</h2>
+					<h2 class="section-title">Eat. Drink. Cheer!</h2>
 					<p class="section-description">
-						Three pillars of the authentic Korean dining experience
+						Bold Korean flavors made to share and celebrate.
 					</p>
 				</div>
 				
-				<div class="features-grid">
-					<div class="feature-card card">
+				<div class="menu-categories">
+					<div class="menu-category card">
+						<div class="menu-category-image">
+							<div class="image-placeholder">Korean Pub Bites</div>
+						</div>
 						<div class="card-body">
-							<div class="feature-icon">🔥</div>
-							<h3 class="feature-title">Sizzling</h3>
-							<p class="feature-description">
-								Stone pot dishes served piping hot and crackling with every bite, 
-								bringing excitement to your table.
+							<h3 class="menu-category-title">Korean Pub Bites</h3>
+							<p class="menu-category-description">
+								Perfect bites made to pair with your drink.
 							</p>
+							<a href="/menu#pub-bites" class="btn btn-outline">View Menu</a>
 						</div>
 					</div>
 					
-					<div class="feature-card card">
-						<div class="card-body">
-							<div class="feature-icon">🍲</div>
-							<h3 class="feature-title">Bubbling</h3>
-							<p class="feature-description">
-								Comforting stews in traditional clay pots that soothe your senses 
-								and bring a sense of home.
-							</p>
+					<div class="menu-category card">
+						<div class="menu-category-image">
+							<div class="image-placeholder">Cheering Menu</div>
 						</div>
-					</div>
-					
-					<div class="feature-card card">
 						<div class="card-body">
-							<div class="feature-icon">🥂</div>
-							<h3 class="feature-title">Cheering</h3>
-							<p class="feature-description">
-								Join in the joy of raising a glass with friends and loved ones 
-								over delicious food and great company.
+							<h3 class="menu-category-title">Cheering Menu</h3>
+							<p class="menu-category-description">
+								Raise your glass, keep the vibe alive.
 							</p>
+							<a href="/drinks" class="btn btn-outline">View Drinks</a>
 						</div>
 					</div>
 				</div>
@@ -96,50 +89,9 @@ import Footer from '../components/Footer.astro';
 							love—because great food is about more than just taste; it's about sharing 
 							moments, creating memories, and feeling truly nourished.
 						</p>
-						<a href="/about" class="btn btn-secondary">Learn More About Us</a>
 					</div>
 					<div class="about-image">
 						<img src="/store.jpeg" alt="YoriTofu Restaurant Interior" class="about-restaurant-image" />
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Menu Preview Section -->
-		<section class="menu-preview section">
-			<div class="container">
-				<div class="section-header">
-					<h2 class="section-title">Our Specialties</h2>
-					<p class="section-description">
-						Discover our signature dishes and Korean pub favorites
-					</p>
-				</div>
-				
-				<div class="menu-categories">
-					<div class="menu-category card">
-						<div class="menu-category-image">
-							<div class="image-placeholder">Korean Pub Bites</div>
-						</div>
-						<div class="card-body">
-							<h3 class="menu-category-title">Korean Pub Bites</h3>
-							<p class="menu-category-description">
-								Perfect appetizers and small plates to share with friends
-							</p>
-							<a href="/menu" class="btn btn-outline">View Menu</a>
-						</div>
-					</div>
-					
-					<div class="menu-category card">
-						<div class="menu-category-image">
-							<div class="image-placeholder">Cheering Menu</div>
-						</div>
-						<div class="card-body">
-							<h3 class="menu-category-title">Cheering Menu</h3>
-							<p class="menu-category-description">
-								Drinks and dishes perfect for celebrations and gatherings
-							</p>
-							<a href="/drinks" class="btn btn-outline">View Drinks</a>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -155,8 +107,8 @@ import Footer from '../components/Footer.astro';
 						traditional recipes, and warm hospitality.
 					</p>
 					<div class="cta-actions">
-						<a href="/reservations" class="btn btn-primary btn-lg">Make a Reservation</a>
-						<a href="/contact" class="btn btn-outline btn-lg">Get Directions</a>
+						<a href="https://www.menoves-online.com/ordering/restaurant/menu?company_uid=c5ecb552-ab71-411d-98fb-f0056cc73a44&restaurant_uid=c420bc2d-c305-4b26-ab09-2baa1ba2c812&facebook=true" class="btn btn-primary btn-lg">Online Order</a>
+						<a href="https://www.google.com/maps/place/Yoritofu/@33.837312,-118.3580216,16z/data=!3m1!4b1!4m6!3m5!1s0x80c2b555906b0d67:0xca80373d51c74171!8m2!3d33.837312!4d-118.3554467!16s%2Fg%2F11xyfjwdgb?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" class="btn btn-outline btn-lg">Get Directions</a>
 					</div>
 				</div>
 			</div>
@@ -169,10 +121,9 @@ import Footer from '../components/Footer.astro';
 <style>
 	/* Hero Section */
 	.hero {
-		min-height: 80vh;
+		min-height: 100vh;
 		display: flex;
 		align-items: center;
-		background: linear-gradient(135deg, var(--color-gray-50) 0%, var(--color-gray-100) 100%);
 		position: relative;
 		overflow: hidden;
 	}
@@ -180,6 +131,11 @@ import Footer from '../components/Footer.astro';
 	.hero-content {
 		flex: 1;
 		z-index: 2;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
 	}
 	
 	.hero-text {
@@ -191,31 +147,35 @@ import Footer from '../components/Footer.astro';
 		font-weight: var(--font-weight-extrabold);
 		line-height: var(--line-height-tight);
 		margin-bottom: var(--space-6);
-		color: var(--color-gray-900);
+		color: var(--color-white);
+		text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.5);
 	}
 	
 	.accent-text {
-		color: var(--color-primary);
+		color: var(--color-accent);
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 	}
 	
 	.hero-description {
 		font-size: var(--font-size-lg);
-		color: var(--color-gray-600);
+		color: var(--color-white);
 		line-height: var(--line-height-relaxed);
 		margin-bottom: var(--space-8);
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0, 0, 0, 0.3);
 	}
 	
 	.hero-actions {
 		display: flex;
 		gap: var(--space-4);
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 	
 	.hero-image {
 		position: absolute;
 		top: 0;
-		right: 0;
-		width: 50%;
+		left: 0;
+		width: 100%;
 		height: 100%;
 		z-index: 1;
 	}
@@ -225,9 +185,6 @@ import Footer from '../components/Footer.astro';
 		height: 100%;
 		object-fit: cover;
 		object-position: center center;
-		transform: scale(1.05);
-		border-radius: var(--radius-lg);
-		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 	}
 	
 	.hero-placeholder,
@@ -241,11 +198,6 @@ import Footer from '../components/Footer.astro';
 		color: var(--color-gray-500);
 		font-weight: var(--font-weight-medium);
 		border-radius: var(--radius-lg);
-	}
-	
-	/* Features Section */
-	.features {
-		background-color: var(--color-white);
 	}
 	
 	.section-header {
@@ -265,38 +217,6 @@ import Footer from '../components/Footer.astro';
 		color: var(--color-gray-600);
 		max-width: 600px;
 		margin: 0 auto;
-	}
-	
-	.features-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: var(--space-8);
-	}
-	
-	.feature-card {
-		text-align: center;
-		transition: transform var(--transition-normal);
-	}
-	
-	.feature-card:hover {
-		transform: translateY(-4px);
-	}
-	
-	.feature-icon {
-		font-size: var(--font-size-4xl);
-		margin-bottom: var(--space-4);
-	}
-	
-	.feature-title {
-		font-size: var(--font-size-xl);
-		font-weight: var(--font-weight-semibold);
-		color: var(--color-gray-900);
-		margin-bottom: var(--space-3);
-	}
-	
-	.feature-description {
-		color: var(--color-gray-600);
-		line-height: var(--line-height-relaxed);
 	}
 	
 	/* About Preview Section */
@@ -411,12 +331,12 @@ import Footer from '../components/Footer.astro';
 	/* Responsive Design */
 	@media (max-width: 768px) {
 		.hero {
-			min-height: 60vh;
+			min-height: 100vh;
 			text-align: center;
 		}
 		
 		.hero-image {
-			display: none;
+			display: block;
 		}
 		
 		.hero-title {
@@ -433,10 +353,6 @@ import Footer from '../components/Footer.astro';
 		}
 		
 		.menu-categories {
-			grid-template-columns: 1fr;
-		}
-		
-		.features-grid {
 			grid-template-columns: 1fr;
 		}
 		
