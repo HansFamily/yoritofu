@@ -8,28 +8,136 @@ import Footer from '../components/Footer.astro';
 	<Header />
 	
 	<main>
-		<!-- Hero Section -->
-		<section class="hero">
-			<div class="hero-content">
-				<div class="container">
-					<div class="hero-text">
-						<h1 class="hero-title">
-							Sizzling, Bubbling<br>
-							<span class="accent-text">& Cheering</span>
-						</h1>
-						<p class="hero-description">
-							Experience authentic Korean cuisine with sizzling stone pot dishes, 
-							bubbling stews in traditional clay pots, and wholesome tofu specialties 
-							crafted with love and fresh ingredients.
-						</p>
-						<div class="hero-actions">
-							<a href="/menu" class="btn btn-primary btn-lg">Explore Menu</a>
+		<!-- Banner Slider Section -->
+		<section class="banner-slider">
+			<div class="slider-container">
+				<div class="slides">
+					<!-- Banner 1 -->
+					<div class="slide active">
+						<div class="banner-content">
+							<div class="container">
+								<div class="banner-text">
+									<h1 class="banner-title">
+										Late Nights, <span class="accent-text">Korean Vibes</span>
+									</h1>
+									<p class="banner-description">
+										We're open late most nights<br>
+										Perfect for dinner, drinks, and good company.
+									</p>
+									<div class="banner-actions">
+										<a href="/menu" class="btn btn-primary btn-lg">Explore Menu</a>
+									</div>
+								</div>
+							</div>
 						</div>
+						<div class="banner-background" style="background-image: url('/banner1.jpg');"></div>
+					</div>
+
+					<!-- Banner 2 -->
+					<div class="slide">
+						<div class="banner-content">
+							<div class="container">
+								<div class="banner-text">
+									<h1 class="banner-title">
+										Late Nights, <span class="accent-text">Korean Vibes</span>
+									</h1>
+									<p class="banner-description">
+										We're open late most nights<br>
+										Perfect for dinner, drinks, and good company.
+									</p>
+									<div class="banner-actions">
+										<a href="/menu" class="btn btn-primary btn-lg">Explore Menu</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="banner-background" style="background-image: url('/banner2.jpg');"></div>
+					</div>
+
+					<!-- Banner 3 -->
+					<div class="slide">
+						<div class="banner-content">
+							<div class="container">
+								<div class="banner-text">
+									<h1 class="banner-title">
+										Late Nights, <span class="accent-text">Korean Vibes</span>
+									</h1>
+									<p class="banner-description">
+										We're open late most nights<br>
+										Perfect for dinner, drinks, and good company.
+									</p>
+									<div class="banner-actions">
+										<a href="/menu" class="btn btn-primary btn-lg">Explore Menu</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="banner-background" style="background-image: url('/banner3.jpg');"></div>
+					</div>
+
+					<!-- Banner 4 -->
+					<div class="slide">
+						<div class="banner-content">
+							<div class="container">
+								<div class="banner-text">
+									<h1 class="banner-title">
+										Late Nights, <span class="accent-text">Korean Vibes</span>
+									</h1>
+									<p class="banner-description">
+										We're open late most nights<br>
+										Perfect for dinner, drinks, and good company.
+									</p>
+									<div class="banner-actions">
+										<a href="/menu" class="btn btn-primary btn-lg">Explore Menu</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="banner-background" style="background-image: url('/banner4.jpg');"></div>
+					</div>
+
+					<!-- Banner 5 -->
+					<div class="slide">
+						<div class="banner-content">
+							<div class="container">
+								<div class="banner-text">
+									<h1 class="banner-title">
+										Late Nights, <span class="accent-text">Korean Vibes</span>
+									</h1>
+									<p class="banner-description">
+										We're open late most nights<br>
+										Perfect for dinner, drinks, and good company.
+									</p>
+									<div class="banner-actions">
+										<a href="/menu" class="btn btn-primary btn-lg">Explore Menu</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="banner-background" style="background-image: url('/banner5.jpg');"></div>
 					</div>
 				</div>
-			</div>
-			<div class="hero-image">
-				<img src="/bibimbob2.jpg" alt="Delicious Korean Bibimbap" class="hero-food-image" />
+
+				<!-- Navigation Dots -->
+				<div class="slider-dots">
+					<button class="dot active" data-slide="0"></button>
+					<button class="dot" data-slide="1"></button>
+					<button class="dot" data-slide="2"></button>
+					<button class="dot" data-slide="3"></button>
+					<button class="dot" data-slide="4"></button>
+				</div>
+
+				<!-- Navigation Arrows -->
+				<button class="slider-arrow prev" aria-label="Previous slide">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<polyline points="15,18 9,12 15,6"></polyline>
+					</svg>
+				</button>
+				<button class="slider-arrow next" aria-label="Next slide">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<polyline points="9,18 15,12 9,6"></polyline>
+					</svg>
+				</button>
 			</div>
 		</section>
 
@@ -119,72 +227,263 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <style>
-	/* Hero Section */
-	.hero {
+	/* Banner Slider Section */
+	.banner-slider {
 		min-height: 100vh;
-		display: flex;
-		align-items: center;
 		position: relative;
 		overflow: hidden;
 	}
-	
-	.hero-content {
-		flex: 1;
-		z-index: 2;
+
+	.slider-container {
 		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
+		width: 100%;
+		height: 100vh;
 	}
-	
-	.hero-text {
-		max-width: 600px;
+
+	.slides {
+		position: relative;
+		width: 100%;
+		height: 100%;
 	}
-	
-	.hero-title {
-		font-size: var(--font-size-5xl);
-		font-weight: var(--font-weight-extrabold);
-		line-height: var(--line-height-tight);
-		margin-bottom: var(--space-6);
-		color: var(--color-white);
-		text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.5);
-	}
-	
-	.accent-text {
-		color: var(--color-accent);
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-	}
-	
-	.hero-description {
-		font-size: var(--font-size-lg);
-		color: var(--color-white);
-		line-height: var(--line-height-relaxed);
-		margin-bottom: var(--space-8);
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0, 0, 0, 0.3);
-	}
-	
-	.hero-actions {
-		display: flex;
-		gap: var(--space-4);
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-	
-	.hero-image {
+
+	.slide {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		z-index: 1;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.6s ease-in-out;
 	}
-	
-	.hero-food-image {
+
+	.slide.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.banner-content {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		text-align: center;
+	}
+
+	.banner-content::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(
+			135deg,
+			rgba(0, 0, 0, 0.4) 0%,
+			rgba(0, 0, 0, 0.2) 50%,
+			rgba(0, 0, 0, 0.6) 100%
+		);
+		z-index: -1;
+	}
+
+	.banner-text {
+		max-width: 700px;
+		padding: var(--space-8);
+		background: rgba(255, 255, 255, 0.05);
+		backdrop-filter: blur(10px);
+		border-radius: var(--radius-2xl);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+	}
+
+	.banner-title {
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		font-weight: var(--font-weight-extrabold);
+		line-height: 1.1;
+		margin-bottom: var(--space-6);
+		color: var(--color-white);
+		text-shadow: 
+			0 2px 4px rgba(0, 0, 0, 0.8),
+			0 4px 8px rgba(0, 0, 0, 0.6),
+			0 8px 16px rgba(0, 0, 0, 0.4);
+		letter-spacing: -0.02em;
+	}
+
+	.accent-text {
+		color: var(--color-accent);
+		text-shadow: 
+			0 2px 4px rgba(0, 0, 0, 0.8),
+			0 4px 8px rgba(0, 0, 0, 0.6),
+			0 0 20px rgba(255, 107, 53, 0.3);
+		position: relative;
+	}
+
+	.accent-text::after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		right: 0;
+		height: 3px;
+		background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+		border-radius: 2px;
+	}
+
+	.banner-description {
+		font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+		color: rgba(255, 255, 255, 0.95);
+		line-height: var(--line-height-relaxed);
+		margin-bottom: var(--space-8);
+		text-shadow: 
+			0 1px 2px rgba(0, 0, 0, 0.8),
+			0 2px 4px rgba(0, 0, 0, 0.6);
+		font-weight: var(--font-weight-medium);
+	}
+
+	.banner-actions {
+		display: flex;
+		gap: var(--space-4);
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.banner-actions .btn {
+		position: relative;
+		padding: var(--space-4) var(--space-8);
+		font-size: var(--font-size-lg);
+		font-weight: var(--font-weight-semibold);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		border-radius: var(--radius-full);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		backdrop-filter: blur(10px);
+		border: 2px solid transparent;
+		overflow: hidden;
+	}
+
+	.banner-actions .btn::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
 		width: 100%;
 		height: 100%;
-		object-fit: cover;
-		object-position: center center;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+		transition: left 0.5s;
+	}
+
+	.banner-actions .btn:hover::before {
+		left: 100%;
+	}
+
+	.banner-actions .btn-primary {
+		background: linear-gradient(135deg, var(--color-accent) 0%, #ff8a50 100%);
+		color: var(--color-white);
+		box-shadow: 
+			0 4px 15px rgba(255, 107, 53, 0.4),
+			0 8px 25px rgba(0, 0, 0, 0.3);
+		border-color: var(--color-accent);
+	}
+
+	.banner-actions .btn-primary:hover {
+		transform: translateY(-2px);
+		box-shadow: 
+			0 8px 25px rgba(255, 107, 53, 0.6),
+			0 15px 35px rgba(0, 0, 0, 0.4);
+		background: linear-gradient(135deg, #ff8a50 0%, var(--color-accent) 100%);
+	}
+
+	.banner-actions .btn-outline {
+		background: rgba(255, 255, 255, 0.1);
+		color: var(--color-white);
+		border-color: rgba(255, 255, 255, 0.3);
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	}
+
+	.banner-actions .btn-outline:hover {
+		background: rgba(255, 255, 255, 0.2);
+		border-color: rgba(255, 255, 255, 0.5);
+		transform: translateY(-2px);
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+	}
+
+	.banner-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: 1;
+	}
+
+	/* Navigation Dots */
+	.slider-dots {
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		gap: 12px;
+		z-index: 3;
+	}
+
+	.dot {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		background-color: transparent;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.dot.active,
+	.dot:hover {
+		background-color: var(--color-white);
+		border-color: var(--color-white);
+		transform: scale(1.2);
+	}
+
+	/* Navigation Arrows */
+	.slider-arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 50px;
+		height: 50px;
+		background-color: rgba(0, 0, 0, 0.3);
+		border: none;
+		border-radius: 50%;
+		color: var(--color-white);
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s ease;
+		z-index: 3;
+	}
+
+	.slider-arrow:hover {
+		background-color: rgba(0, 0, 0, 0.6);
+		transform: translateY(-50%) scale(1.1);
+	}
+
+	.slider-arrow.prev {
+		left: 20px;
+	}
+
+	.slider-arrow.next {
+		right: 20px;
+	}
+
+	.slider-arrow svg {
+		width: 20px;
+		height: 20px;
 	}
 	
 	.hero-placeholder,
@@ -330,21 +629,44 @@ import Footer from '../components/Footer.astro';
 	
 	/* Responsive Design */
 	@media (max-width: 768px) {
-		.hero {
+		.banner-slider {
 			min-height: 100vh;
-			text-align: center;
 		}
-		
-		.hero-image {
-			display: block;
+
+		.banner-text {
+			max-width: 90%;
+			padding: var(--space-6);
+			margin: 0 var(--space-4);
 		}
-		
-		.hero-title {
-			font-size: var(--font-size-4xl);
+
+		.banner-title {
+			font-size: clamp(2rem, 8vw, 3rem);
+			margin-bottom: var(--space-4);
 		}
-		
-		.hero-actions {
+
+		.banner-description {
+			font-size: clamp(1rem, 4vw, 1.25rem);
+			margin-bottom: var(--space-6);
+		}
+
+		.banner-actions {
 			justify-content: center;
+			gap: var(--space-3);
+		}
+
+		.banner-actions .btn {
+			padding: var(--space-3) var(--space-6);
+			font-size: var(--font-size-base);
+			min-width: 140px;
+		}
+
+		/* Hide arrows on mobile, keep dots */
+		.slider-arrow {
+			display: none;
+		}
+
+		.slider-dots {
+			bottom: 20px;
 		}
 		
 		.about-content {
@@ -368,16 +690,141 @@ import Footer from '../components/Footer.astro';
 	}
 	
 	@media (max-width: 480px) {
-		.hero-title {
-			font-size: var(--font-size-3xl);
+		.banner-text {
+			padding: var(--space-4);
+			margin: 0 var(--space-2);
 		}
-		
+
+		.banner-title {
+			font-size: clamp(1.75rem, 10vw, 2.5rem);
+			margin-bottom: var(--space-3);
+		}
+
+		.banner-description {
+			font-size: clamp(0.875rem, 5vw, 1.125rem);
+			margin-bottom: var(--space-4);
+		}
+
+		.banner-actions {
+			flex-direction: column;
+			align-items: center;
+			gap: var(--space-2);
+		}
+
+		.banner-actions .btn {
+			width: 100%;
+			max-width: 200px;
+			padding: var(--space-3) var(--space-4);
+			font-size: var(--font-size-sm);
+		}
+
+		.accent-text::after {
+			height: 2px;
+			bottom: -2px;
+		}
+
 		.section-title {
 			font-size: var(--font-size-2xl);
 		}
-		
+
 		.cta-title {
 			font-size: var(--font-size-2xl);
 		}
 	}
 </style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		const slides: NodeListOf<Element> = document.querySelectorAll('.slide');
+		const dots: NodeListOf<Element> = document.querySelectorAll('.dot');
+		const prevArrow: Element | null = document.querySelector('.slider-arrow.prev');
+		const nextArrow: Element | null = document.querySelector('.slider-arrow.next');
+
+		let currentSlide: number = 0;
+		let slideInterval: number;
+
+		// Initialize slider
+		function initSlider() {
+			showSlide(currentSlide);
+			startAutoSlide();
+		}
+
+		// Show specific slide
+		function showSlide(index: number) {
+			// Hide all slides
+			slides.forEach(slide => {
+				slide.classList.remove('active');
+			});
+
+			// Remove active class from all dots
+			dots.forEach(dot => {
+				dot.classList.remove('active');
+			});
+
+			// Show current slide and activate corresponding dot
+			slides[index].classList.add('active');
+			dots[index].classList.add('active');
+
+			currentSlide = index;
+		}
+
+		// Next slide
+		function nextSlide() {
+			currentSlide = (currentSlide + 1) % slides.length;
+			showSlide(currentSlide);
+			resetAutoSlide();
+		}
+
+		// Previous slide
+		function prevSlide() {
+			currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+			showSlide(currentSlide);
+			resetAutoSlide();
+		}
+
+		// Go to specific slide
+		function goToSlide(index: number) {
+			showSlide(index);
+			resetAutoSlide();
+		}
+
+		// Auto slide functionality
+		function startAutoSlide() {
+			slideInterval = window.setInterval(nextSlide, 5000); // Change slide every 5 seconds
+		}
+
+		function resetAutoSlide() {
+			window.clearInterval(slideInterval);
+			startAutoSlide();
+		}
+
+		// Event listeners
+		if (nextArrow) {
+			nextArrow.addEventListener('click', nextSlide);
+		}
+
+		if (prevArrow) {
+			prevArrow.addEventListener('click', prevSlide);
+		}
+
+		// Dot click events
+		dots.forEach((dot, index) => {
+			dot.addEventListener('click', () => goToSlide(index));
+		});
+
+		// Pause auto slide on hover
+		const sliderContainer: Element | null = document.querySelector('.slider-container');
+		if (sliderContainer) {
+			sliderContainer.addEventListener('mouseenter', () => {
+				window.clearInterval(slideInterval);
+			});
+
+			sliderContainer.addEventListener('mouseleave', () => {
+				startAutoSlide();
+			});
+		}
+
+		// Initialize the slider
+		initSlider();
+	});
+</script>
